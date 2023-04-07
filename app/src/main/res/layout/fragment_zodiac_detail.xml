@@ -14,10 +14,10 @@
         android:text="Zodiac Name" />
 
     <TextView
-        android:id="@+id/zodiac_description"
+        android:id="@+id/zodiac_desc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Zodiac Description" />
+        android:text="Zodiac Desc" />
 
     <TextView
         android:id="@+id/zodiac_symbol"

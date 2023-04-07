@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.widget.doOnTextChanged
 import com.example.manorroom.databinding.FragmentZodiacDetailBinding
 import java.util.*
 
@@ -47,7 +48,7 @@ class ZodiacDetailFragment : Fragment() {
                 zodiac = zodiac.copy(name = text.toString())
             }
 
-            zodiacDescription.doOnTextChanged { text ->
+            zodiacDesc.doOnTextChanged { text ->
                     zodiac = zodiac.copy(description = text.toString())
             }
 

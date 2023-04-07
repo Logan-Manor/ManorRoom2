@@ -13,9 +13,6 @@ class ZodiacHolder(
     fun bind(zodiac: Zodiac) {
 
         binding.zodiacName.text = zodiac.name
-        binding.zodiacDesc.text = zodiac.description
-        binding.zodiacSymbol.text = zodiac.symbol
-        binding.zodiacMonth.text = zodiac.month
 
         binding.root.setOnClickListener {
             Toast.makeText(
@@ -23,12 +20,13 @@ class ZodiacHolder(
                 "${zodiac.name} clicked!",
                 Toast.LENGTH_SHORT
             ).show()
+        }
     }
 }
 
 class ZodiacListAdapter(
     private val zodiacs: List<Zodiac>
-) : RecyclerView.Adapter<ZodaicHolder>() {
+) : RecyclerView.Adapter<ZodiacHolder>() {
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int

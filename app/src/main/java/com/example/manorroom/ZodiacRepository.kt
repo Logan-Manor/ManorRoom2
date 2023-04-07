@@ -6,7 +6,7 @@ import com.example.manorroom.database.ZodiacDatabase
 import kotlinx.coroutines.flow.Flow
 import java.util.UUID
 
-private const val DATABASE_NAME = "zodiac-database"
+private const val DATABASE_NAME = "zodiac"
 
 class ZodiacRepository private constructor(context: Context) {
 

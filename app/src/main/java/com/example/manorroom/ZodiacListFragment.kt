@@ -1,3 +1,5 @@
+package com.example.manorroom
+
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,14 +10,12 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.manorroom.ZodiacHolder
-import com.example.manorroom.ZodiacListViewModel
 import com.example.manorroom.databinding.FragmentZodiacListBinding
 import kotlinx.coroutines.launch
 
 private const val TAG = "ZodiacListFragment"
 
-class zodiacListFragment : Fragment() {
+class ZodiacListFragment : Fragment() {
 
     private var _binding: FragmentZodiacListBinding? = null
     private val binding
@@ -44,7 +44,7 @@ class zodiacListFragment : Fragment() {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
                 zodiacListViewModel.zodiacs.collect { zodiacs ->
                     binding.zodiacRecyclerView.adapter =
-                        ZodiacHolder.ZodiacListAdapter(zodiacs)
+                        ZodiacListAdapter(zodiacs)
                 }
             }
         }
